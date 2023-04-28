@@ -69,7 +69,7 @@ function App() {
 
       <div className="popup confirm-popup">
         <button type="button" className="popup__cross-button confirm-popup__cross-button">
-          <img className="popup__cross confirm-popup__cross" src={require('../images/cross.svg').default}alt="(закрыть)"/>
+          <img className="popup__cross confirm-popup__cross" src={require('../images/cross.svg').default} alt="(закрыть)"/>
         </button>
         <div className="popup__container confirm-popup__container">
           <h3 className="popup__paragraph confirm-popup__paragraph">Вы уверены?</h3>
