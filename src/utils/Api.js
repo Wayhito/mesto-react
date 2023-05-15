@@ -32,6 +32,15 @@ class Api {
     .then((res) => this._checkResponse(res));
   }
 
+  changeLikeCardStatus(cardId, isLiked){
+    if (isLiked) {
+      return this.addCardLike(cardId);
+
+    } else {
+      return this.deleteCardLike(cardId);
+    }
+  }
+
   getInitialCards() {
     return fetch(`${this._baseUrl}cards`, {
       headers: {
@@ -52,18 +61,16 @@ class Api {
     .then((res) => this._checkResponse(res));
   }
 
-  editProfile({name, job}) {
+  setUserInfo(objUserInfo) {
     return fetch(`${this._baseUrl}users/me`, {
       method: "PATCH",
       headers: {
         authorization: this._token,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: name,
-        about: job,
-      }),
+      body: JSON.stringify(objUserInfo)
     })
+
     .then((res) => this._checkResponse(res));
   }
 
@@ -75,7 +82,7 @@ class Api {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        avatar: data.link,
+        avatar: data,
       }),
     })
     .then((res) => this._checkResponse(res));
