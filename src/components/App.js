@@ -24,7 +24,7 @@ function App() {
     "cohort": ''
   });
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     Promise.all([
       /*Данные Пользователя*/
       api.getUserInfo(),

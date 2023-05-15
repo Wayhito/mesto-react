@@ -36,15 +36,15 @@ function EditProfilePopup( {isOpen, onClose, onUpdateUser}) {
         onSubmit = {handleSubmit}
         buttonText = "Сохранить">
 
-          <input className="popup__input profile-popup__input profile-popup__input_type_name" 
-          id="name-input" minLength="2" maxLength="40" type="text" name="name" placeholder="Пример: имя" value={name} required onChange={handleNameChange} />
-          <span className="popup__input-error name-input-error"></span>
+            <input className="popup__input profile-popup__input profile-popup__input_type_name" 
+            id="name-input" minLength="2" maxLength="40" type="text" name="name" placeholder="Пример: имя" value={name} required onChange={handleNameChange} />
+            <span className="popup__input-error name-input-error"></span>
 
-          <input className="popup__input profile-popup__input profile-popup__input_type_job" 
-          id="job-input" minLength="2" maxLength="200" type="text" name="job" placeholder="Пример: работа" value={description} required onChange={handleDescriptionChange}/>
-          <span className="popup__input-error job-input-error"></span>
+            <input className="popup__input profile-popup__input profile-popup__input_type_job" 
+            id="job-input" minLength="2" maxLength="200" type="text" name="job" placeholder="Пример: работа" value={description} required onChange={handleDescriptionChange}/>
+            <span className="popup__input-error job-input-error"></span>
 
-          <button className="popup__submit profile-popup__submit" type="submit">Сохранить</button>
+            <button className="popup__submit profile-popup__submit" type="submit">Сохранить</button>
     </PopupWithForm>
   );
 }
