@@ -43,7 +43,6 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
           type="url" name="link" placeholder="Пример: ссылка" value={link} required onChange={handleLinkChange} />
           <span className="popup__input-error link-input-error"></span>
 
-          <button className="popup__submit add-popup__submit" type="submit">Создать</button>
         </PopupWithForm>
   );
 }

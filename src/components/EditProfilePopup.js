@@ -25,7 +25,7 @@ function EditProfilePopup( {isOpen, onClose, onUpdateUser}) {
   React.useEffect(() => {
     setName(currentUser.name);
     setDescription(currentUser.about);
-  }, [currentUser]);
+  }, [currentUser, isOpen]);
 
   return(
     <PopupWithForm
@@ -44,7 +44,6 @@ function EditProfilePopup( {isOpen, onClose, onUpdateUser}) {
             id="job-input" minLength="2" maxLength="200" type="text" name="job" placeholder="Пример: работа" value={description} required onChange={handleDescriptionChange}/>
             <span className="popup__input-error job-input-error"></span>
 
-            <button className="popup__submit profile-popup__submit" type="submit">Сохранить</button>
     </PopupWithForm>
   );
 }
