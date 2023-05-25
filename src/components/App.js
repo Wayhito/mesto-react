@@ -202,8 +202,6 @@ function App() {
     setInfoMessage(message);
   }
 
-  
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="content">
