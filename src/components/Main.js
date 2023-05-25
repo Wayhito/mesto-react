@@ -1,13 +1,19 @@
 import React from "react";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import Card from "./Card.js";
+import Header from "./Header.js";
 
-function Main({cards, onEditProfile, onEditAvatar, onNewLocation, onCardClick, onCardLike, onCardDelete}) {
+function Main({cards, onEditProfile, onEditAvatar, onNewLocation, onCardClick, onCardLike, onCardDelete, email, onLogout,}) {
 
   const currentUser = React.useContext(CurrentUserContext);
 
   return (
     <main>
+      <Header>
+        <p className="header__menu-item">{email}</p>
+        <button href="#" className="header__menu-item" onClick={onLogout}>Выйти</button>
+      </Header>
+
       <section className="profile">
         <div className="profile__image-container">
           <img className="profile__image" src={currentUser.avatar} alt="Картинка профиля"/>
