@@ -17,6 +17,9 @@ CSS Grid Layout
 JavaScript, переменные, функции, JS-классы
 Вебпак-сборка
 Api, fetch
+React
+Авторизация, регистрация
+Сохранение данных авторизованного пользователя через токен
 
 **GitHub Pages**
 * [Ссылка на проект в GutHub Pages](https://wayhito.github.io/mesto-react/)

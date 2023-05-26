@@ -3,7 +3,7 @@ import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
 import Footer from './Footer.js';
-import Header from './Header.js';
+//import Header from './Header.js';
 import Main from './Main.js';
 
 import PopupWithForm from "./PopupWithForm.js";
